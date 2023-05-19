@@ -22,7 +22,7 @@ export class User {
   password: string;
 
   @Column({ enum: ['USER', 'ADMIN'] })
-  role: string;
+  role?: string;
 
   @CreateDateColumn()
   created_at: Date;
@@ -31,5 +31,5 @@ export class User {
   updated_at: Date;
 
   @DeleteDateColumn()
-  deleted_at: Date;
+  deleted_at?: Date;
 }
